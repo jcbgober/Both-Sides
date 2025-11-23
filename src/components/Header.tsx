@@ -40,22 +40,3 @@ export default function Header() {
     </header>
   );
 }
-5. src/components/Footer.tsx (Minor Polish: Better Links)
-Replace entire content:
-tsxexport default function Footer() {
-  return (
-    <footer className="bg-gray-100 dark:bg-gray-900 py-12 mt-20 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <p className="text-lg font-medium mb-4">Built for understanding across divides</p>
-        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-          Not affiliated with any party • Suggest topics: hello@bothsides.com
-        </p>
-        <div className="flex justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
-          <a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About</a>
-          <a href="/contribute" className="hover:text-blue-600 dark:hover:text-blue-400">Contribute</a>
-          <a href="/privacy" className="hover:text-blue-600 dark:hover:text-blue-400">Privacy</a>
-        </div>
-      </div>
-    </footer>
-  );
-}
