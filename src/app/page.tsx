@@ -10,7 +10,7 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const allTopics = topicsData as Topic[];
-  const categories = ["All", ...new Set(allTopics.map(t => t.category))];
+  const categories = ["All", ...Array.from(new Set(allTopics.map(t => t.category)))];
 
   const filteredTopics = allTopics.filter(topic => {
     const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
