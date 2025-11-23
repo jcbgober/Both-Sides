@@ -1,29 +1,61 @@
 "use client";
+import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 
 export default function Header() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    const root = window.document.documentElement;
     if (darkMode) {
-      document.documentElement.classList.add("dark");
+      root.classList.add("dark");
+      localStorage.theme = "dark";
     } else {
-      document.documentElement.classList.remove("dark");
+      root.classList.remove("dark");
+      localStorage.theme = "light";
     }
   }, [darkMode]);
 
+  useEffect(() => {
+    const saved = localStorage.theme;
+    if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      setDarkMode(true);
+    }
+  }, []);
+
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800">
+    <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Both Sides</h1>
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
+          Both Sides
+        </h1>
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800"
+          className="p-3 rounded-xl hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 shadow-md hover:shadow-lg"
+          aria-label="Toggle dark mode"
         >
-          {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+          {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
         </button>
       </div>
     </header>
+  );
+}
+5. src/components/Footer.tsx (Minor Polish: Better Links)
+Replace entire content:
+tsxexport default function Footer() {
+  return (
+    <footer className="bg-gray-100 dark:bg-gray-900 py-12 mt-20 border-t border-gray-200 dark:border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <p className="text-lg font-medium mb-4">Built for understanding across divides</p>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Not affiliated with any party • Suggest topics: hello@bothsides.com
+        </p>
+        <div className="flex justify-center space-x-6 text-sm text-gray-500 dark:text-gray-400">
+          <a href="/about" className="hover:text-blue-600 dark:hover:text-blue-400">About</a>
+          <a href="/contribute" className="hover:text-blue-600 dark:hover:text-blue-400">Contribute</a>
+          <a href="/privacy" className="hover:text-blue-600 dark:hover:text-blue-400">Privacy</a>
+        </div>
+      </div>
+    </footer>
   );
 }
