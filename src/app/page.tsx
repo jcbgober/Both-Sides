@@ -31,42 +31,37 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Search Bar */}
       <div className="mb-8 max-w-2xl mx-auto">
         <input
           type="text"
           placeholder="Search topics or arguments..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="search-input"
+          className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-blue-500 dark:focus:border-blue-400 transition-colors outline-none"
         />
       </div>
 
-      {/* Category Filters */}
       <div className="mb-8 flex flex-wrap gap-2 justify-center">
         {categories.map(cat => (
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`category-btn ${selectedCategory === cat ? 'active' : ''}`}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === cat ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' : 'bg-gray-200 dark:bg-gray-700'}`}
           >
             {cat}
           </button>
         ))}
       </div>
 
-      {/* Topics Grid */}
-      {filteredTopics.length > 0 ? (
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1">
-          {filteredTopics.map((topic) => (
-            <TopicCard key={topic.id} topic={topic} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-center text-gray-500 dark:text-gray-400 text-lg">
-          No topics match your search. Try something else!
-        </p>
-      )}
+      <div className="grid gap-8">
+        {filteredTopics.length > 0 ? filteredTopics.map(topic => (
+          <TopicCard key={topic.id} topic={topic} />
+        )) : (
+          <p className="text-center text-gray-500 dark:text-gray-400 text-lg">
+            No topics match your search.
+          </p>
+        )}
+      </div>
     </div>
   );
 }
