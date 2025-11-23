@@ -1,3 +1,5 @@
+JavaScript
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 
