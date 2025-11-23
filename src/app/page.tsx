@@ -1,3 +1,5 @@
+tsx
+
 import TopicCard from "@/components/TopicCard";
 import topics from "@/data/topics.json";
 
