@@ -1,4 +1,4 @@
-Javascript
+
 
 module.exports = {
   content: [
