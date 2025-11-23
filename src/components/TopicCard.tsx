@@ -1,5 +1,3 @@
-tsx
-
 import { ExternalLink } from "lucide-react";
 
 type Topic = {
