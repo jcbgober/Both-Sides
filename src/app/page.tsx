@@ -23,8 +23,9 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-6xl font-bold mb-4 inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent bg-[length:100%_100%]">
-  Both Sides
+        <h1 className="text-6xl font-bold mb-4 inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent bg-[length:100%_100%] sm:bg-[length:auto]">
+            \\\
+          Both Sides
 </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
           Clear arguments from left and right — no spin, just facts.
