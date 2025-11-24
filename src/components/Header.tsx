@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -16,12 +16,12 @@ export default function Header() {
     }
   }, [darkMode]);
 
-  useEffect(() => {
-    const saved = localStorage.theme;
-    if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-      setDarkMode(true);
-    }
-  }, []);
+ useEffect(() => {
+  // Always start in dark mode
+  document.documentElement.classList.add("dark");
+  localStorage.theme = "dark";
+  setDarkMode(true);
+}, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
