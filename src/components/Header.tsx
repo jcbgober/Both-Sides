@@ -26,7 +26,7 @@ export default function Header() {
   return (
   <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
     <div className="max-w-7xl mx-auto px-4 py-3 sm:py-4 flex justify-between items-center">
-      <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent">
+      <h1 className="text-2xl sm:text-3xl font-bold inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent bg-[length:100%_100%] sm:bg-[length:200%_100%] sm:bg-[position:0%_50%]">
   Both Sides
 </h1>
       <button
