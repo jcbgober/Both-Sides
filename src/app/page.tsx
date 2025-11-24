@@ -23,7 +23,8 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent [background-size:200%_100%] bg-[position:0%_50%]">
+        <h1 className="font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent"
+style={{ backgroundImage: 'linear-gradient(to right, #2563eb, #9333ea, #dc2626)' }}>
   Both Sides
 </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
