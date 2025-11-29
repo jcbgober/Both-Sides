@@ -1,35 +1,40 @@
 [
   {
-    "id": 1,
-    "title": "Immigration & Border Security",
-    "category": "Immigration",
-    "left": {
-      "title": "Progressive / Open-Border Arguments",
-      "points": [
-        "America is a nation of immigrants; moral duty to welcome those fleeing violence and poverty",
-        "Undocumented immigrants pay billions in taxes while being ineligible for most benefits",
-        "Mass deportation would destroy families and cost $300–600 billion",
-        "Legal immigration quotas have not kept up with labor demand"
-      ],
-      "sources": [
-        "https://www.aclu.org/issues/immigrants-rights",
-        "https://www.cato.org/policy-report/january/february-2023/immigration-restrictions-harm-american-workers"
-      ]
-    },
-    "right": {
-      "title": "Conservative / Restrictionist Arguments",
-      "points": [
-        "Uncontrolled borders enable crime, drugs (especially fentanyl), and human trafficking",
-        "Large-scale low-skill immigration depresses wages for working-class Americans",
-        "Nations have a sovereign right and duty to control who enters",
-        "Current levels strain schools, hospitals, and welfare systems"
-      ],
-      "sources": [
-        "https://www.fairus.org/issue/publications-resources/the-cost-open-borders",
-        "https://www.heritage.org/immigration"
-      ]
-    }
+  "id": 1,
+  "title": "U.S. Immigration & Border Policy",
+  "category": "Immigration",
+  "left": {
+    "title": "Open & Humane Approach",
+    "points": [
+      "America is a nation of immigrants with a moral duty to welcome those fleeing violence and poverty",
+      "Undocumented immigrants pay billions in taxes while ineligible for most benefits",
+      "Immigrants (documented and not) commit crimes at lower rates than native-born citizens",
+      "Dreamers and long-term residents deserve a path to citizenship",
+      "Mass deportation would destroy families and cost hundreds of billions"
+    ],
+    "sources": [
+      "www.aclu.org/issues/immigrants-rights",
+      "www.americanimmigrationcouncil.org/research/immigrants-and-crime",
+      "www.cato.org/policy-report/january/february-2023"
+    ]
   },
+  "right": {
+    "title": "Secure Borders & Rule of Law Approach",
+    "points": [
+      "Record illegal crossings since 2021 have overwhelmed cities, schools, and hospitals",
+      "Fentanyl deaths (100k+/year) largely flow through the southern border",
+      "Large-scale low-skill immigration depresses wages for working-class Americans",
+      "Nations lose sovereignty when they cannot control who enters",
+      "Legal immigration yes — illegal immigration no: enforce existing laws"
+    ],
+    "sources": [
+      "www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
+      "www.dea.gov/sites/default/files/2024-05/2024 National Drug Threat Assessment.pdf",
+      "www.fairus.org/issue/publications-resources"
+    ]
+  },
+  "votes": { "left": 0, "right": 0 }
+},
   {
     "id": 2,
     "title": "Abortion Rights",
@@ -144,37 +149,6 @@
   },
   {
     "id": 6,
-    "title": "Immigration Policy (2025–2026)",
-    "category": "Immigration",
-    "left": {
-      "title": "Open & Humane Arguments",
-      "points": [
-        "Immigrants commit crimes at lower rates than native-born citizens",
-        "Dreamers and long-term residents deserve a path to citizenship",
-        "Family separation and mass deportation are cruel and logistically impossible",
-        "America’s aging workforce needs young immigrant labor"
-      ],
-      "sources": [
-        "www.americanimmigrationcouncil.org/research/immigrants-and-crime",
-        "www.migrationpolicy.org/article/dreamers-facts"
-      ]
-    },
-    "right": {
-      "title": "Secure Borders First Arguments",
-      "points": [
-        "Record illegal crossings since 2021 have overwhelmed cities and schools",
-        "Fentanyl deaths (100k+/year) largely flow through the southern border",
-        "Nations lose sovereignty when they cannot control who enters",
-        "Legal immigration yes, illegal immigration no — enforce the law"
-      ],
-      "sources": [
-        "www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
-        "www.dea.gov/sites/default/files/2024-05/2024%20National%20Drug%20Threat%20Assessment.pdf"
-      ]
-    }
-  },
-  {
-    "id": 7,
     "title": "Police Brutality & Reform",
     "category": "Social Issues",
     "left": {
@@ -205,7 +179,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "DEI Programs & Affirmative Action",
     "category": "Social Issues",
     "left": {
