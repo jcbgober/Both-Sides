@@ -14,8 +14,8 @@ export default function Home() {
   const allTopics = topicsData as Topic[];
   const categories = ["All", ...Array.from(new Set(allTopics.map(t => t.category)))];
 
-  const filteredTopics = allTopics.filter(topic => {
-    const matchesSearch = 
+const filteredTopics = allTopics.filter(topic => {
+    const matchesSearch =
       topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       topic.left.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
       topic.right.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase()));
