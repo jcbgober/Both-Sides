@@ -1,213 +1,260 @@
 [
   {
-  "id": 1,
-  "title": "U.S. Immigration & Border Policy",
-  "category": "Immigration",
-  "left": {
-    "title": "Open & Humane Approach",
-    "points": [
-      "America is a nation of immigrants with a moral duty to welcome those fleeing violence and poverty",
-      "Undocumented immigrants pay billions in taxes while ineligible for most benefits",
-      "Immigrants (documented and not) commit crimes at lower rates than native-born citizens",
-      "Dreamers and long-term residents deserve a path to citizenship",
-      "Mass deportation would destroy families and cost hundreds of billions"
-    ],
-    "sources": [
-      "www.aclu.org/issues/immigrants-rights",
-      "www.americanimmigrationcouncil.org/research/immigrants-and-crime",
-      "www.cato.org/policy-report/january/february-2023"
-    ]
+    "id": 1,
+    "title": "U.S. Immigration & Border Policy",
+    "category": "Immigration",
+    "debate": {
+      "rounds": [
+        {
+          "side": "left",
+          "claim": "Undocumented immigrants pay $12–25 billion in taxes yearly while being ineligible for most benefits — they are a net fiscal contributor.",
+          "sources": ["itep.org/undocumented-immigrants-taxes-2024", "cato.org/blog/immigrants-fiscal-impact"]
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "text": "When you include their U.S.-born children and state/local costs (education, healthcare, welfare), the net fiscal drain is $100–150 billion annually (NAS 2017, CIS 2023).",
+            "sources": ["cis.org/Report/Cost-Illegal-Immigration", "nas.edu/publication/immigration-fiscal-impact"]
+          }
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "counterRebuttal": {
+              "text": "Even excluding citizen children, low-skill immigrant-headed households still consume more in services than they pay in taxes over their lifetime.",
+              "sources": ["cis.org/Report/63-Non-Citizen-Households-Access-Welfare-Programs"]
+            }
+          }
+        },
+        {
+          "side": "right",
+          "claim": "Over 100,000 Americans have died from fentanyl since 2021 — the vast majority smuggled through the southern border.",
+          "sources": ["dea.gov/2024-national-drug-threat-assessment", "cbp.gov/newsroom/stats/drug-seizure-statistics"]
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "text": "90–97% of fentanyl is seized at legal ports of entry, smuggled by U.S. citizens — not by asylum-seekers crossing between ports.",
+            "sources": ["cbp.gov/newsroom/stats/drug-seizure-statistics"]
+          }
+        }
+      ]
+    },
+    "votes": { "left": 0, "right": 0 }
   },
-  "right": {
-    "title": "Secure Borders & Rule of Law Approach",
-    "points": [
-      "Record illegal crossings since 2021 have overwhelmed cities, schools, and hospitals",
-      "Fentanyl deaths (100k+/year) largely flow through the southern border",
-      "Large-scale low-skill immigration depresses wages for working-class Americans",
-      "Nations lose sovereignty when they cannot control who enters",
-      "Legal immigration yes — illegal immigration no: enforce existing laws"
-    ],
-    "sources": [
-      "www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
-      "www.dea.gov/sites/default/files/2024-05/2024 National Drug Threat Assessment.pdf",
-      "www.fairus.org/issue/publications-resources"
-    ]
-  },
-  "votes": { "left": 0, "right": 0 }
-},
   {
     "id": 2,
     "title": "Abortion Rights",
     "category": "Social Issues",
-    "left": {
-      "title": "Pro-Choice Arguments",
-      "points": [
-        "Bodily autonomy: no one should be forced to use their body to sustain another life",
-        "Bans do not stop abortions, they make them unsafe",
-        "Most Americans support legal abortion in all or most cases (Pew 2024)",
-        "Restrictive laws disproportionately harm poor and minority women"
-      ],
-      "sources": ["https://www.plannedparenthood.org", "https://www.guttmacher.org"]
+    "debate": {
+      "rounds": [
+        {
+          "side": "left",
+          "claim": "Bodily autonomy is absolute — no one can be forced to use their body to sustain another life, even if that life is a fetus.",
+          "sources": ["plannedparenthood.org/learn/abortion", "guttmacher.org"]
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "text": "The fetus is a distinct human organism with its own DNA and heartbeat by 6 weeks — abortion intentionally ends an innocent human life.",
+            "sources": ["nrlc.org/science", "lozierinstitute.org/fetal-development"]
+          }
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "counterRebuttal": {
+              "text": "Personhood is not granted at conception in law or biology — viability (~24 weeks) or birth is the historical and legal line in most societies.",
+              "sources": ["supreme-court-roe-v-wade-1973", "guttmacher.org/journals/psrh/2005"]
+            }
+          }
+        },
+        {
+          "side": "right",
+          "claim": "Modern ultrasound and fetal surgery show pain capacity by 20 weeks — late-term abortions are especially brutal.",
+          "sources": ["lozierinstitute.org/fetal-pain", "charlotte-lozier-institute-2023"]
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "text": "Late-term abortions are <1% of cases and almost always for severe fetal anomalies or maternal health — bans force women to carry non-viable pregnancies.",
+            "sources": ["guttmacher.org/fact-sheet/induced-abortion-united-states"]
+          }
+        }
+      ]
     },
-    "right": {
-      "title": "Pro-Life Arguments",
-      "points": [
-        "Human life begins at conception; abortion is the ending of an innocent human life",
-        "Modern science (fetal heartbeat at 6 weeks, pain capability by 20 weeks)",
-        "Society protects the vulnerable – unborn children are the most vulnerable",
-        "Adoption is a compassionate alternative"
-      ],
-      "sources": ["https://www.nrlc.org", "https://www.sba-list.org"]
-    }
+    "votes": { "left": 0, "right": 0 }
   },
   {
     "id": 3,
     "title": "Climate Change & Energy Policy",
     "category": "Environment",
-    "left": {
-      "title": "Aggressive Climate Action Arguments",
-      "points": [
-        "Scientific consensus: human activity is primary driver of global warming",
-        "Extreme weather events already costing hundreds of billions",
-        "Green energy now cheaper than fossil fuels in many regions",
-        "Moral obligation to future generations"
-      ],
-      "sources": ["https://www.ipcc.ch", "https://www.iea.org"]
+    "debate": {
+      "rounds": [
+        {
+          "side": "left",
+          "claim": "97% scientific consensus: human CO₂ emissions are the primary driver of recent global warming.",
+          "sources": ["ipcc.ch/report/ar6/syr", "nasa.gov/climate-consensus"]
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "text": "The 97% figure is heavily disputed and based on abstract counting — many scientists disagree on magnitude and danger.",
+            "sources": ["wattsupwiththat.com/2013/09/97-consensus-debunked", "legates-et-al-2015"]
+          }
+        },
+        {
+          "side": "right",
+          "claim": "Every major climate model since 1990 has over-predicted warming — reality is running below predictions.",
+          "sources": ["mckitrick-2023-model-performance", "christy-2024-uah-testimony"]
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "text": "When corrected for natural variability (El Niño, volcanoes), observed warming tracks the middle of model projections.",
+            "sources": ["hausfather-et-al-2020-nature", "carbonbrief.org/analysis-how-well-have-climate-models-projected"]
+          }
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "counterRebuttal": {
+              "text": "Even with adjustments, the models still run hot — and net-zero policies will cost trillions while delivering negligible temperature reduction.",
+              "sources": ["lomborg-2023-cost-benefit", "climatecasino.net"]
+            }
+          }
+        }
+      ]
     },
-    "right": {
-      "title": "Energy Realism / Skeptic Arguments",
-      "points": [
-        "Current green tech cannot replace fossil fuels without massive reliability problems",
-        "Aggressive net-zero policies raise energy prices and hurt the poor",
-        "Climate models have consistently over-predicted warming",
-        "Economic growth and adaptation are more effective than forced degrowth"
-      ],
-      "sources": ["https://www.co2coalition.org", "https://www.prageru.com/video/the-climate-hustle"]
-    }
+    "votes": { "left": 0, "right": 0 }
   },
   {
     "id": 4,
-    "title": "Abortion Rights",
+    "title": "LGBTQ Rights & Gender Ideology",
     "category": "Social Issues",
-    "left": {
-      "title": "Pro-Choice Arguments",
-      "points": [
-        "Bodily autonomy: no person should be forced to sustain another life with their body",
-        "Abortion bans don’t stop abortions — they make them unsafe and drive women to desperation",
-        "Most Americans support legal abortion in all or most cases (Pew, Gallup 2024–2025)",
-        "Restrictive laws disproportionately harm low-income and minority women"
-      ],
-      "sources": [
-        "www.plannedparenthood.org/learn/abortion",
-        "www.guttmacher.org/united-states/abortion"
+    "debate": {
+      "rounds": [
+        {
+          "side": "left",
+          "claim": "Gender-affirming care for minors is life-saving — every major medical body (AMA, AAP, APA) endorses it.",
+          "sources": ["aap.org/gender-affirming-care", "ama-assn.org/transgender-care"]
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "text": "Sweden, Finland, Norway, and the UK have all restricted youth gender medicine after systematic reviews found low-quality evidence and high regret rates.",
+            "sources": ["segm.org/england-sweden-finland-restrictions", "cass.independent-review.uk"]
+          }
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "counterRebuttal": {
+              "text": "Those countries still allow care for severe cases — they tightened protocols, not banned it. Desistance rates pre-2015 were inflated by outdated diagnostic criteria.",
+              "sources": ["wpath.org/soc8", "cornell.edu/what-does-the-scholarly-research-say-about-desistance"]
+            }
+          }
+        },
+        {
+          "side": "right",
+          "claim": "Allowing biological males in women’s sports and prisons erases sex-based rights and safety protections.",
+          "sources": ["savewomenssports.com", "fairplayforwomen.com"]
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "text": "Trans women on hormone therapy for 12+ months lose most strength advantages — inclusion with conditions is fair.",
+            "sources": ["ncbi.nlm.nih.gov/pmc/articles/PMC9331832"]
+          }
+        }
       ]
     },
-    "right": {
-      "title": "Pro-Life Arguments",
-      "points": [
-        "Human life begins at conception; abortion intentionally ends an innocent human life",
-        "Science shows unique DNA, heartbeat at ~6 weeks, pain capacity by 20 weeks",
-        "Society has a duty to protect the most vulnerable, including the unborn",
-        "Adoption is a loving, life-affirming alternative"
-      ],
-      "sources": [
-        "www.nrlc.org/about/life-begins-at-conception",
-        "www.sba-list.org/learn"
-      ]
-    }
+    "votes": { "left": 0, "right": 0 }
   },
   {
     "id": 5,
-    "title": "LGBTQ Rights & Gender Ideology",
+    "title": "Police Brutality & Reform",
     "category": "Social Issues",
-    "left": {
-      "title": "Progressive / Affirmation Arguments",
-      "points": [
-        "Trans people deserve to live authentically; denial of care increases suicide risk",
-        "Gender-affirming healthcare is supported by every major medical association (AMA, APA, AAP)",
-        "Same-sex marriage and anti-discrimination laws are basic civil rights",
-        "‘Don’t Say Gay’ laws and bathroom bills endanger LGBTQ youth"
-      ],
-      "sources": [
-        "www.hrc.org/resources/understanding-the-transgender-community",
-        "www.apa.org/topics/lgbtq/transgender"
+    "debate": {
+      "rounds": [
+        {
+          "side": "left",
+          "claim": "Black Americans are 2.5–3× more likely to be killed by police than white Americans — systemic bias exists.",
+          "sources": ["mappingpoliceviolence.org", "pnas.org/doi/10.1073/pnas.1903856116"]
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "text": "When adjusted for crime rates and encounter frequency, racial disparities in police killings largely disappear (Harvard 2019, Roland Fryer).",
+            "sources": ["scholar.harvard.edu/files/fryer/files/fryer_police_aer.pdf"]
+          }
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "counterRebuttal": {
+              "text": "Fryer’s study only looked at Houston; national studies still show disparity after controlling for crime (Ross 2015, Edwards 2019).",
+              "sources": ["journals.sagepub.com/doi/10.1177/0032329218768265"]
+            }
+          }
+        },
+        {
+          "side": "right",
+          "claim": "Cities that defunded police in 2020 saw historic murder spikes — 30–50% increases in many cities.",
+          "sources": ["manhattan.institute/article/defund-police-crime", "fbi.gov/crime-statistics-2021"]
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "text": "Correlation ≠ causation — the pandemic, economic collapse, and gun proliferation drove the 2020–2021 spike nationwide, including in cities that increased police budgets.",
+            "sources": ["counciloncj.org/2021-crime-trends"]
+          }
+        }
       ]
     },
-    "right": {
-      "title": "Conservative / Biology-First Arguments",
-      "points": [
-        "Biological sex is binary and immutable; redefining it erases women’s rights and spaces",
-        "Rapid-onset gender dysphoria in teens and social contagion concerns are real",
-        "Minors cannot consent to irreversible puberty blockers and surgeries",
-        "Fairness in women’s sports and privacy in locker rooms/bathrooms matter"
-      ],
-      "sources": [
-        "www.heritage.org/gender",
-        "segm.org (Society for Evidence-Based Gender Medicine)"
-      ]
-    }
+    "votes": { "left": 0, "right": 0 }
   },
   {
     "id": 6,
-    "title": "Police Brutality & Reform",
-    "category": "Social Issues",
-    "left": {
-      "title": "Defund / Reimagine Policing Arguments",
-      "points": [
-        "Black Americans are 2.5–3× more likely to be killed by police than white Americans",
-        "Billions spent on militarized policing could fund mental health, housing, education",
-        "Qualified immunity shields bad officers; accountability is nearly impossible",
-        "‘Broken windows’ policing criminalizes poverty and minor offenses"
-      ],
-      "sources": [
-        "mappingpoliceviolence.org",
-        "www.aclu.org/issues/criminal-law-reform/reforming-police"
-      ]
-    },
-    "right": {
-      "title": "Law & Order / Back the Blue Arguments",
-      "points": [
-        "Police killings are rare (~1,000/year) compared to 200k+ violent crimes police stop",
-        "Defunding led to crime spikes in 2020–2023 (FBI data)",
-        "Most officers are professional; bad apples don’t justify demonizing the profession",
-        "Body cameras and better training are the real solutions, not abolition"
-      ],
-      "sources": [
-        "www.fbi.gov/services/cjis/ucr",
-        "www.manhattan-institute.org/police-defunding-crime"
-      ]
-    }
-  },
-  {
-    "id": 7,
     "title": "DEI Programs & Affirmative Action",
     "category": "Social Issues",
-    "left": {
-      "title": "Pro-DEI / Equity Arguments",
-      "points": [
-        "Historical discrimination created lasting disparities that require active correction",
-        "Diverse teams outperform homogeneous ones (McKinsey, Harvard studies)",
-        "Meritocracy doesn’t exist in an unequal society; DEI levels the playing field",
-        "Representation matters — people need to see themselves in leadership"
-      ],
-      "sources": [
-        "www.mckinsey.com/featured-insights/diversity-and-inclusion/diversity-wins",
-        "hbr.org/2020/11/getting-serious-about-diversity-enough-already-with-the-business-case"
+    "debate": {
+      "rounds": [
+        {
+          "side": "left",
+          "claim": "Historical discrimination created lasting disparities — active correction (DEI, affirmative action) is necessary for true equality.",
+          "sources": ["mckinsey.com/diversity-wins-2020", "hbr.org/diversity-business-case"]
+        },
+        {
+          "side": "right",
+          "rebuttal": {
+            "text": "DEI often means explicit racial preferences that discriminate against whites and Asians — the Supreme Court ruled race-based admissions unconstitutional in 2023.",
+            "sources": ["supreme-court-students-for-fair-admissions-v-harvard-2023"]
+          }
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "counterRebuttal": {
+              "text": "The ruling banned race as the decisive factor but explicitly allowed consideration of lived experience with racism in essays.",
+              "sources": ["scotusblog.com/2023/06/supreme-court-affirmative-action"]
+            }
+          }
+        },
+        {
+          "side": "right",
+          "claim": "Mandatory DEI training has been shown to increase bias and resentment, not reduce it (Harvard Business Review meta-analysis).",
+          "sources": ["hbr.org/2021/06/dei-training-doesnt-work", "city-journal.org/dei-training-backfire"]
+        },
+        {
+          "side": "left",
+          "rebuttal": {
+            "text": "Poorly designed one-hour trainings fail — long-term, well-implemented programs with accountability do reduce bias.",
+            "sources": ["nature.com/articles/s41562-021-01194-8"]
+          }
+        }
       ]
     },
-    "right": {
-      "title": "Anti-DEI / Colorblind Merit Arguments",
-      "points": [
-        "DEI often means discriminatory hiring and promotion against whites and Asians",
-        "Judging people by skin color instead of merit is the definition of racism",
-        "Corporate DEI trainings have been shown to increase bias, not reduce it",
-        "True equality is treating everyone the same, regardless of identity"
-      ],
-      "sources": [
-        "www.city-journal.org/article/the-folly-of-diversity-training",
-        "www.newsweek.com/2024/01/19/end-dei-christopher-rufo-1857923.html"
-      ]
-    }
+    "votes": { "left": 0, "right": 0 }
   }
 ]
-
