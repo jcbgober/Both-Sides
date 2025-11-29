@@ -15,19 +15,13 @@ export default function Home() {
   const categories = ["All", ...Array.from(new Set(allTopics.map(t => t.category)))];
 
   const filteredTopics = allTopics.filter(topic => {
-  // Search inside every claim and rebuttal text
-  const searchHaystack = topic.debate.rounds
-    .flatMap(round => {
-      const texts = [round.claim]
-      if (round.rebuttal?.text) texts.push(round.rebuttal.text)
-      if (round.rebuttal?.counterRebuttal?.text) texts.push(round.rebuttal.counterRebuttal.text)
-      return texts.filter(Boolean) as string[]
-    })
-    .join(" ")
-    .toLowerCase()
+    const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      topic.left.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      topic.right.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase()));
 
-  const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    searchHaystack.includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory
   return matchesSearch && matchesCategory
