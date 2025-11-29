@@ -3,26 +3,8 @@ import { useState } from "react";
 import topicsData from "../data/topics.json";
 import TopicCard from "../components/TopicCard";
 
-type Topic = {
-  id: number;
-  title: string;
-  category: string;
-  debate: {
-    rounds: Array<{
-      side: "left" | "right";
-      claim?: string;
-      sources?: string[];
-      rebuttal?: {
-        text: string;
-        sources?: string[];
-        counterRebuttal?: { text: string; sources?: string[] };
-      };
-    }>;
-  };
-  votes: { left: number; right: number };
-};
+type Topic = typeof topicsData[number];
 
-// This line fixes the TypeScript error
 const allTopics = topicsData as Topic[];
 
 export default function Home() {
