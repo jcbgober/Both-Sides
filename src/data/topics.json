@@ -80,5 +80,160 @@
       "sources": ["https://www.co2coalition.org", "https://www.prageru.com/video/the-climate-hustle"]
     }
   }
+  {
+    "id": 4,
+    "title": "Abortion Rights",
+    "category": "Social Issues",
+    "left": {
+      "title": "Pro-Choice Arguments",
+      "points": [
+        "Bodily autonomy: no person should be forced to sustain another life with their body",
+        "Abortion bans don’t stop abortions — they make them unsafe and drive women to desperation",
+        "Most Americans support legal abortion in all or most cases (Pew, Gallup 2024–2025)",
+        "Restrictive laws disproportionately harm low-income and minority women"
+      ],
+      "sources": [
+        "www.plannedparenthood.org/learn/abortion",
+        "www.guttmacher.org/united-states/abortion"
+      ]
+    },
+    "right": {
+      "title": "Pro-Life Arguments",
+      "points": [
+        "Human life begins at conception; abortion intentionally ends an innocent human life",
+        "Science shows unique DNA, heartbeat at ~6 weeks, pain capacity by 20 weeks",
+        "Society has a duty to protect the most vulnerable, including the unborn",
+        "Adoption is a loving, life-affirming alternative"
+      ],
+      "sources": [
+        "www.nrlc.org/about/life-begins-at-conception",
+        "www.sba-list.org/learn"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "LGBTQ Rights & Gender Ideology",
+    "category": "Social Issues",
+    "left": {
+      "title": "Progressive / Affirmation Arguments",
+      "points": [
+        "Trans people deserve to live authentically; denial of care increases suicide risk",
+        "Gender-affirming healthcare is supported by every major medical association (AMA, APA, AAP)",
+        "Same-sex marriage and anti-discrimination laws are basic civil rights",
+        "‘Don’t Say Gay’ laws and bathroom bills endanger LGBTQ youth"
+      ],
+      "sources": [
+        "www.hrc.org/resources/understanding-the-transgender-community",
+        "www.apa.org/topics/lgbtq/transgender"
+      ]
+    },
+    "right": {
+      "title": "Conservative / Biology-First Arguments",
+      "points": [
+        "Biological sex is binary and immutable; redefining it erases women’s rights and spaces",
+        "Rapid-onset gender dysphoria in teens and social contagion concerns are real",
+        "Minors cannot consent to irreversible puberty blockers and surgeries",
+        "Fairness in women’s sports and privacy in locker rooms/bathrooms matter"
+      ],
+      "sources": [
+        "www.heritage.org/gender",
+        "segm.org (Society for Evidence-Based Gender Medicine)"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Immigration Policy (2025–2026)",
+    "category": "Immigration",
+    "left": {
+      "title": "Open & Humane Arguments",
+      "points": [
+        "Immigrants commit crimes at lower rates than native-born citizens",
+        "Dreamers and long-term residents deserve a path to citizenship",
+        "Family separation and mass deportation are cruel and logistically impossible",
+        "America’s aging workforce needs young immigrant labor"
+      ],
+      "sources": [
+        "www.americanimmigrationcouncil.org/research/immigrants-and-crime",
+        "www.migrationpolicy.org/article/dreamers-facts"
+      ]
+    },
+    "right": {
+      "title": "Secure Borders First Arguments",
+      "points": [
+        "Record illegal crossings since 2021 have overwhelmed cities and schools",
+        "Fentanyl deaths (100k+/year) largely flow through the southern border",
+        "Nations lose sovereignty when they cannot control who enters",
+        "Legal immigration yes, illegal immigration no — enforce the law"
+      ],
+      "sources": [
+        "www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
+        "www.dea.gov/sites/default/files/2024-05/2024%20National%20Drug%20Threat%20Assessment.pdf"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "title": "Police Brutality & Reform",
+    "category": "Social Issues",
+    "left": {
+      "title": "Defund / Reimagine Policing Arguments",
+      "points": [
+        "Black Americans are 2.5–3× more likely to be killed by police than white Americans",
+        "Billions spent on militarized policing could fund mental health, housing, education",
+        "Qualified immunity shields bad officers; accountability is nearly impossible",
+        "‘Broken windows’ policing criminalizes poverty and minor offenses"
+      ],
+      "sources": [
+        "mappingpoliceviolence.org",
+        "www.aclu.org/issues/criminal-law-reform/reforming-police"
+      ]
+    },
+    "right": {
+      "title": "Law & Order / Back the Blue Arguments",
+      "points": [
+        "Police killings are rare (~1,000/year) compared to 200k+ violent crimes police stop",
+        "Defunding led to crime spikes in 2020–2023 (FBI data)",
+        "Most officers are professional; bad apples don’t justify demonizing the profession",
+        "Body cameras and better training are the real solutions, not abolition"
+      ],
+      "sources": [
+        "www.fbi.gov/services/cjis/ucr",
+        "www.manhattan-institute.org/police-defunding-crime"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "title": "DEI Programs & Affirmative Action",
+    "category": "Social Issues",
+    "left": {
+      "title": "Pro-DEI / Equity Arguments",
+      "points": [
+        "Historical discrimination created lasting disparities that require active correction",
+        "Diverse teams outperform homogeneous ones (McKinsey, Harvard studies)",
+        "Meritocracy doesn’t exist in an unequal society; DEI levels the playing field",
+        "Representation matters — people need to see themselves in leadership"
+      ],
+      "sources": [
+        "www.mckinsey.com/featured-insights/diversity-and-inclusion/diversity-wins",
+        "hbr.org/2020/11/getting-serious-about-diversity-enough-already-with-the-business-case"
+      ]
+    },
+    "right": {
+      "title": "Anti-DEI / Colorblind Merit Arguments",
+      "points": [
+        "DEI often means discriminatory hiring and promotion against whites and Asians",
+        "Judging people by skin color instead of merit is the definition of racism",
+        "Corporate DEI trainings have been shown to increase bias, not reduce it",
+        "True equality is treating everyone the same, regardless of identity"
+      ],
+      "sources": [
+        "www.city-journal.org/article/the-folly-of-diversity-training",
+        "www.newsweek.com/2024/01/19/end-dei-christopher-rufo-1857923.html"
+      ]
+    }
+  }
 ]
 
