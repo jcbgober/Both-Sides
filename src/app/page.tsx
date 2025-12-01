@@ -21,7 +21,8 @@ type Topic = {
   }[];
 };
 
-const allTopics = topicsData as Topic[];
+// Guard against undefined during static generation
+const allTopics: Topic[] = Array.isArray(topicsData) ? (topicsData as Topic[]) : [];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
