@@ -15,9 +15,9 @@ export default function Home() {
 
   const filteredTopics = allTopics.filter(topic => {
     const matchesSearch =
-      topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      topic.left.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      topic.right.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase()));
+  topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  topic.left.points!.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
+  topic.right.points!.some(p => p.toLowerCase().includes(searchTerm.toLowerCase()));
 
     const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory;
     return matchesSearch && matchesCategory;
