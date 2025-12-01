@@ -21,29 +21,25 @@ type Topic = {
   }[];
 };
 
-const allTopics: Topic[] = topicsData as any;
-
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories =
-    allTopics && Array.isArray(allTopics) && allTopics.length > 0
-      ? ["All", ...Array.from(new Set(allTopics.map(t => t.category)))]
-      : ["All"];
+  const allTopics = topicsData as Topic[];
 
-  const filteredTopics =
-    allTopics && Array.isArray(allTopics)
-      ? allTopics.filter(topic => {
-          const matchesSearch =
-            topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            topic.left.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
-            topic.right.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase()));
+  const categories = allTopics?.length
+    ? ["All", ...Array.from(new Set(allTopics.map(t => t.category)))]
+    : ["All"];
 
-          const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory;
-          return matchesSearch && matchesCategory;
-        })
-      : [];
+  const filteredTopics = allTopics?.filter(topic => {
+    const matchesSearch =
+      topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      topic.left.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      topic.right.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  }) ?? [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
