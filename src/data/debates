@@ -1,0 +1,31 @@
+// src/data/debates.js
+export const debatesData = {
+  immigration: {
+    title: "U.S. Immigration & Border Policy",
+    leftName: "Open & Humane Approach",
+    rightName: "Secure Borders & Rule of Law Approach",
+    arguments: [
+      {
+        id: "economic-contribution",
+        left: "Undocumented immigrants pay ~$12B in taxes annually and fill critical labor shortages in agriculture and construction",
+        right: "Illegal immigration costs federal + state governments $150B+ net per year when including education, healthcare, and welfare",
+        thread: [
+          { side: "left", text: "Most 'cost' studies ignore long-term GDP contributions and the fact that immigrants are net positive after one generation (CBO 2024).", sources: [{ name: "CBO 2024", url: "https://www.cbo.gov" }] },
+          { side: "right", text: "FAIR’s 2023 study accounts for full lifecycle costs including children’s education and found $150B+ annual deficit.", sources: [{ name: "FAIR 2023", url: "https://www.fairus.org" }] },
+          { side: "left", text: "Even the CBO report cited by the right shows immigrants increase GDP by $7 trillion over 10 years.", sources: [] },
+        ]
+      },
+      {
+        id: "asylum-backlog",
+        left: "The U.S. asylum system is overwhelmed because Congress has refused to fund more judges and staff",
+        right: "Many asylum claims are fraudulent or economic-migration in disguise, clogging a system meant for genuine persecution cases",
+        thread: [
+          { side: "left", text: "90% of asylum seekers pass the initial credible-fear screening conducted by USCIS officers.", sources: [] },
+          { side: "right", text: "Only ~15-20% of cases ultimately win asylum after full adjudication – the rest are denied or abandoned.", sources: [] },
+        ]
+      },
+      // Add more arguments + threads here as you go
+    ]
+  },
+  // You’ll duplicate the pattern for abortion, climate, etc. later
+};
