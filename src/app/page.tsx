@@ -27,7 +27,7 @@ export default function Home() {
 
   const allTopics = topicsData as Topic[];
 
-  const categories = allTopics?.length
+  const categories = allTopics?.length > 0
     ? ["All", ...Array.from(new Set(allTopics.map(t => t.category)))]
     : ["All"];
 
