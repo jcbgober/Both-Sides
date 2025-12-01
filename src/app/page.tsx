@@ -21,7 +21,7 @@ type Topic = {
   }[];
 };
 
-const allTopics: Topic[] = Array.isArray(topicsData) ? topicsData : [];
+const allTopics = (topicsData ?? []) as Topic[];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
