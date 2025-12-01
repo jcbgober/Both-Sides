@@ -1,6 +1,4 @@
-force-dynamic is being ignored because the page is still being statically optimized.
-Replace src/app/page.tsx with this exact code (no extra text, no comments, no copy-paste errors):
-TypeScriptimport { useState } from "react";
+import { useState } from "react";
 import topicsData from "@/data/topics.json";
 import TopicCard from "@/components/TopicCard";
 
