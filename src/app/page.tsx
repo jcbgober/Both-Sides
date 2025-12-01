@@ -1,10 +1,12 @@
-"use client";
-
-export const dynamic = 'force-dynamic';
+Here’s the exact fix. No fluff.
+Replace the contents of src/app/page.tsx with this:
+TypeScript"use client";
 
 import { useState } from "react";
 import topicsData from "@/data/topics.json";
 import TopicCard from "@/components/TopicCard";
+
+export const dynamic = "force-dynamic";   // this kills the prerender crash
 
 type Topic = {
   id: number;
@@ -45,6 +47,7 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
+      {/* your existing JSX – unchanged */}
       <div className="text-center mb-12">
         <h1 className="text-6xl font-bold mb-4 inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent bg-[length:100%_100%]">
           Both Sides
@@ -59,7 +62,7 @@ export default function Home() {
           type="text"
           placeholder="Search topics or arguments..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e.target.value)}
           className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 focus:border-blue-500 dark:focus:border-blue-400 transition-colors outline-none hover:border-blue-400 dark:hover:border-blue-500"
         />
       </div>
@@ -71,8 +74,8 @@ export default function Home() {
             onClick={() => setSelectedCategory(cat)}
             className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
               selectedCategory === cat
-                ? 'bg-blue-600 text-white shadow-md ring-4 ring-blue-600/30'
-                : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-blue-500/20 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105 hover:shadow-sm'
+                ? "bg-blue-600 text-white shadow-md ring-4 ring-blue-600/30"
+                : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-blue-500/20 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-105 hover:shadow-sm"
             }`}
           >
             {cat}
@@ -82,9 +85,7 @@ export default function Home() {
 
       <div className="grid gap-8">
         {filteredTopics.length > 0 ? (
-          filteredTopics.map(topic => (
-            <TopicCard key={topic.id} topic={topic} />
-          ))
+          filteredTopics.map(topic => <TopicCard key={topic.id} topic={topic} />)
         ) : (
           <p className="text-center text-gray-500 dark:text-gray-400 text-lg">
             No topics match your search.
