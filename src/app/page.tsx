@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import topicsData from "@/data/topics.json";
+import { useState, useEffect } from "react";
 import TopicCard from "@/components/TopicCard";
 
 export const dynamic = "force-dynamic";
@@ -22,16 +21,22 @@ type Topic = {
 };
 
 export default function Home() {
+  const [topics, setTopics] = useState<Topic[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const allTopics = topicsData as Topic[];
+  useEffect(() => {
+    fetch("/data/topics.json")
+      .then(res => res.json())
+      .then(data => setTopics(data as Topic[]))
+      .catch(() => setTopics([]));
+  }, []);
 
-  const categories = allTopics?.length > 0
-    ? ["All", ...Array.from(new Set(allTopics.map(t => t.category)))]
+  const categories = topics.length
+    ? ["All", ...Array.from(new Set(topics.map(t => t.category)))]
     : ["All"];
 
-  const filteredTopics = allTopics?.filter(topic => {
+  const filteredTopics = topics.filter(topic => {
     const matchesSearch =
       topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       topic.left.points.some(p => p.toLowerCase().includes(searchTerm.toLowerCase())) ||
@@ -39,7 +44,7 @@ export default function Home() {
 
     const matchesCategory = selectedCategory === "All" || topic.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  }) ?? [];
+  });
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -75,7 +80,7 @@ export default function Home() {
       </div>
 
       <div className="grid gap-8">
-        {filteredTopics.length > 0 ? filteredTopics.map(topic => <TopicCard key={topic.id} topic={topic} />) : <p className="text-center text-gray-500 dark:text-gray-400 text-lg">No topics match your search.</p>}
+        {filteredTopics.length > 0 ? filteredTopics.map(topic => <TopicCard key={topic.id} topic={topic} />) : <p className="text-center text-gray-500 dark:text-gray-400 text-lg">Loading or no topics found.</p>}
       </div>
     </div>
   );
