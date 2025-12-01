@@ -21,13 +21,13 @@ type Topic = {
   }[];
 };
 
-const allTopics = (topicsData ?? []) as Topic[];
+const allTopics = (topicsData || []) as Topic[];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = allTopics.length
+  const categories = allTopics.length > 0
     ? ["All", ...Array.from(new Set(allTopics.map(t => t.category)))]
     : ["All"];
 
