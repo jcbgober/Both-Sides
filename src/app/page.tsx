@@ -1,18 +1,17 @@
 "use client";
-import { useState } from "react";
-import topicsData from "../data/topics.json";
-import TopicCard from "../components/TopicCard";
 
-type BaseTopic = {
+import { useState } from "react";
+import topicsData from "@/data/topics.json";  // ← changed path (works better with App Router)
+import TopicCard from "@/components/TopicCard";
+
+// Proper full type with optional arguments
+type Topic = {
   id: number;
   title: string;
   category: string;
   left: { title: string; points: string[]; sources: string[] };
   right: { title: string; points: string[]; sources: string[] };
   votes: { left: number; right: number };
-};
-
-type Topic = BaseTopic & {
   arguments?: {
     id: string;
     left: string;
@@ -21,7 +20,8 @@ type Topic = BaseTopic & {
   }[];
 };
 
-const allTopics = topicsData as Topic[];
+// Safe fallback — this prevents the "undefined.map" crash
+const allTopics: Topic[] = Array.isArray(topicsData) ? topicsData : [];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
