@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import topicsData from "@/data/topics.json";
 import TopicCard from "@/components/TopicCard";
