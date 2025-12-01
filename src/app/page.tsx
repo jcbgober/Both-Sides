@@ -3,7 +3,23 @@ import { useState } from "react";
 import topicsData from "../data/topics.json";
 import TopicCard from "../components/TopicCard";
 
-type Topic = typeof topicsData[number];
+type BaseTopic = {
+  id: number;
+  title: string;
+  category: string;
+  left: { title: string; points: string[]; sources: string[] };
+  right: { title: string; points: string[]; sources: string[] };
+  votes: { left: number; right: number };
+};
+
+type Topic = BaseTopic & {
+  arguments?: {
+    id: string;
+    left: string;
+    right: string;
+    thread: { side: "left" | "right"; text: string; sources?: { name: string; url: string }[] }[];
+  }[];
+};
 
 const allTopics = topicsData as Topic[];
 
