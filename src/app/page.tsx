@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { useState } from "react";
 import topicsData from "@/data/topics.json";
 import TopicCard from "@/components/TopicCard";
