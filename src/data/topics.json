@@ -18,10 +18,10 @@
       "www.cato.org/policy-report/january/february-2023"
     ]
   },
-  "right": { /* unchanged */ },
+  "right": { ... },
   "votes": { "left": 0, "20": 0 },
 
-  // ADD THIS NEW ARRAY (only inside Immigration for now)
+  
   "arguments": [
     {
       "id": "moral-duty",
