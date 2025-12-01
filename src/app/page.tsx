@@ -1,12 +1,10 @@
-Here’s the exact fix. No fluff.
-Replace the contents of src/app/page.tsx with this:
-TypeScript"use client";
+"use client";
+
+export const dynamic = "force-dynamic";
 
 import { useState } from "react";
 import topicsData from "@/data/topics.json";
 import TopicCard from "@/components/TopicCard";
-
-export const dynamic = "force-dynamic";   // this kills the prerender crash
 
 type Topic = {
   id: number;
@@ -47,7 +45,6 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-      {/* your existing JSX – unchanged */}
       <div className="text-center mb-12">
         <h1 className="text-6xl font-bold mb-4 inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-red-600 bg-clip-text text-transparent bg-[length:100%_100%]">
           Both Sides
