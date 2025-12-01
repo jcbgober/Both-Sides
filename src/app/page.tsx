@@ -21,14 +21,15 @@ type Topic = {
   }[];
 };
 
-// Guard against undefined during static generation
-const allTopics: Topic[] = Array.isArray(topicsData) ? (topicsData as Topic[]) : [];
+const allTopics: Topic[] = Array.isArray(topicsData) ? topicsData : [];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", ...Array.from(new Set(allTopics.map(t => t.category)))];
+  const categories = allTopics.length
+    ? ["All", ...Array.from(new Set(allTopics.map(t => t.category)))]
+    : ["All"];
 
   const filteredTopics = allTopics.filter(topic => {
     const matchesSearch =
