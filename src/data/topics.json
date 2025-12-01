@@ -1,40 +1,48 @@
   [
   {
-    "id": 1,
-    "title": "U.S. Immigration & Border Policy",
-    "category": "Immigration",
-    "left": {
-      "title": "Open & Humane Approach",
-      "points": [
-        "America is a nation of immigrants with a moral duty to welcome those fleeing violence and poverty",
-        "Undocumented immigrants pay billions in taxes while ineligible for most benefits",
-        "Immigrants commit crimes at lower rates than native-born citizens",
-        "Dreamers and long-term residents deserve a path to citizenship",
-        "Mass deportation would destroy families and cost hundreds of billions"
-      ],
-      "sources": [
-        "www.aclu.org/issues/immigrants-rights",
-        "www.americanimmigrationcouncil.org/research/immigrants-and-crime",
-        "www.cato.org/policy-report/january/february-2023"
-      ]
-    },
-    "right": {
-      "title": "Secure Borders & Rule of Law Approach",
-      "points": [
-        "Record illegal crossings since 2021 have overwhelmed cities, schools, and hospitals",
-        "Fentanyl deaths (100k+/year) largely flow through the southern border",
-        "Large-scale low-skill immigration depresses wages for working-class Americans",
-        "Nations lose sovereignty when they cannot control who enters",
-        "Legal immigration yes — illegal immigration no: enforce existing laws"
-      ],
-      "sources": [
-        "www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
-        "www.dea.gov/sites/default/files/2024-05/2024%20National%20Drug%20Threat%20Assessment.pdf",
-        "www.fairus.org/issue/publications-resources"
-      ]
-    },
-    "votes": { "left": 0, "right": 0 }
+  "id": 1,
+  "title": "U.S. Immigration & Border Policy",
+  "category": "Immigration",
+  "left": {
+    "title": "Open & Humane Approach",
+    "points": [
+      "America is a nation of immigrants with a moral duty to welcome those fleeing violence and poverty",
+      "Undocumented immigrants pay billions in taxes while ineligible for most benefits",
+      "Immigrants commit crimes at lower rates than native-born citizens",
+      "Dreamers and long-term residents deserve a path to citizenship",
+      "Mass deportation would destroy families and cost hundreds of billions"
+    ],
+    "sources": [
+      "www.aclu.org/issues/immigrants-rights",
+      "www.americanimmigrationcouncil.org/research/immigrants-and-crime",
+      "www.cato.org/policy-report/january/february-2023"
+    ]
   },
+  "right": { /* unchanged */ },
+  "votes": { "left": 0, "20": 0 },
+
+  // ADD THIS NEW ARRAY (only inside Immigration for now)
+  "arguments": [
+    {
+      "id": "moral-duty",
+      "left": "America is a nation of immigrants with a moral duty to welcome those fleeing violence and poverty",
+      "right": "Nations lose sovereignty when they cannot control who enters",
+      "thread": [
+        { "side": "left", "text": "The Statue of Liberty and Emma Lazarus’s poem are part of America’s founding identity.", "sources": [] },
+        { "side": "right", "text": "A nation that cannot secure its borders ceases to be a nation (Reagan, Churchill, etc.).", "sources": [] }
+      ]
+    },
+    {
+      "id": "taxes-benefits",
+      "left": "Undocumented immigrants pay billions in taxes while ineligible for most benefits",
+      "right": "Record illegal crossings since 2021 have overwhelmed cities, schools, and hospitals",
+      "thread": [
+        { "side": "left", "text": "Undocumented immigrants paid $96.7 billion in federal, state, and local taxes in 2022 (ITEP).", "sources": [{ "name": "ITEP 2024", "url": "https://itep.org/undocumented-immigrants-taxes-2024/" }] },
+        { "side": "right", "text": "NYC spent $4+ billion in 2023–2024 on migrant housing and services alone.", "sources": [{ "name": "NYC Comptroller", "url": "https://comptroller.nyc.gov" }] }
+      ]
+    }
+  ]
+},
   {
     "id": 2,
     "title": "Abortion Rights",
