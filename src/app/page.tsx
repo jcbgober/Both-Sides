@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import topicsData from "@/data/topics.json";  // ← changed path (works better with App Router)
+import topicsData from "@/data/topics.json";
 import TopicCard from "@/components/TopicCard";
 
-// Proper full type with optional arguments
+// This is the real type – arguments are optional
 type Topic = {
   id: number;
   title: string;
@@ -12,16 +12,20 @@ type Topic = {
   left: { title: string; points: string[]; sources: string[] };
   right: { title: string; points: string[]; sources: string[] };
   votes: { left: number; right: number };
-  arguments?: {
+  arguments?: Array<{
     id: string;
     left: string;
     right: string;
-    thread: { side: "left" | "right"; text: string; sources?: { name: string; url: string }[] }[];
-  }[];
+    thread: Array<{
+      side: "left" | "right";
+      text: string;
+      sources?: Array<{ name: string; url: string }>;
+    }>;
+  }>;
 };
 
-// Safe fallback — this prevents the "undefined.map" crash
-const allTopics: Topic[] = Array.isArray(topicsData) ? topicsData : [];
+// Force-cast the JSON import – this is safe and common in Next.js
+const allTopics = topicsData as Topic[];
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
